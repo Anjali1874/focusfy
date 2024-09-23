@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.text-container {
+  display: flex;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  height: calc(100vh - 80px); /* Adjust height as needed (80px is an example for navbar height) */
+  margin-top: 20px; /* Space between navbar and text */
+}
+
+.text-container div {
+  font-size: 2em; /* Adjust font size */
+  color: white; /* Set text color to white */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: add some shadow for better visibility */
+}
+/* src/App.css */
+
+body {
+  background-image: url('./bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
