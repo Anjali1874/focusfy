@@ -21,11 +21,49 @@
 /* src/App.css */
 
 body {
-  background-image: url('./bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   min-height: 100vh;
+}
+
+.text-container {
+  padding: 2rem;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.bg-custom {
+  background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+html {
+  scroll-behavior: smooth;
 }
 

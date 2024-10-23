@@ -15,6 +15,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background-image: url('public/bg.webp'); /* Path to your background image */
+  background-size: cover; /* Make the image cover the entire background */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Keep the image fixed while scrolling */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.content {
+  min-height: 200vh; /* Ensure there's enough content to scroll */
+  padding: 50px;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add overlay effect for readability */
+}
 
 a {
   font-weight: 500;
@@ -65,5 +84,9 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+
+  body{
+    height:auto;
   }
 }

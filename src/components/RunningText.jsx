@@ -34,7 +34,7 @@ const RunningText = ({ quotes, speed }) => {
   }, [quotes, speed, isDisplaying, currentQuoteIndex, charIndex]); // Add charIndex to dependencies
 
   return (
-    <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'white', textAlign: 'center' }}>
+    <div style={{ fontSize: '3em', fontWeight: 'bold', color: 'white', textAlign: 'center' }}>
       {displayedText}
     </div>
   );

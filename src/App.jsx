@@ -1,37 +1,47 @@
-import RunningText from "./components/RunningText";
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
-import './App.css';
-
-const quotes = [
-  "Let your tomorrow thank your today.",
-  "Success is not the key to happiness. Happiness is the key to success.",
-  "Believe you can and you're halfway there.",
-  "Your limitation—it's only your imagination.",
-  "Push yourself, because no one else is going to do it for you."
-];
+import Home from "./components/Home";
+import About from "./components/About";
+import Service from "./components/Services";
+import Footer from "./components/Footer";
+import AOS from "aos"; // Import AOS for animations
+import "aos/dist/aos.css";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import Login from "./components/Login"; // Import the login component
+import "./App.css";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+
   return (
-    <>
-      <div className="bg-cover bg-center bg-fixed h-40" style={{ backgroundImage: "url('./bg.webp')" }}>
-        <Navbar />
+    <Router>
+      <div className="bg-fixed flex flex-col">
+        <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} /> {/* Pass login state */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <section id="home">
+                  <Home />
+                </section>
+                <section id="about">
+                  <About />
+                </section>
+                <section id="services">
+                  <Service />
+                </section>
+                <section id="contact">
+                  {/* Add your contact section here */}
+                </section>
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        </Routes>
       </div>
-      <div className="text-container h-96">
-          <RunningText quotes={quotes} speed={100} />
-        </div>
-        <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "flex-start", // Aligns the content at the start of the flex container
-        height: "100vh", // Full viewport height
-        margin: "0px auto", 
-      }}
-    >
-      <button className="ms-20 bg-yellow-500 text-xl">Let's get started</button>
-    </div>
-    </>
+    </Router>
   );
 }
 

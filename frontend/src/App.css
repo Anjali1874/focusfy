@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.text-container {
+  display: flex;
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  height: calc(100vh - 80px); /* Adjust height as needed (80px is an example for navbar height) */
+  margin-top: 20px; /* Space between navbar and text */
+}
+
+.text-container div {
+  font-size: 2em; /* Adjust font size */
+  color: white; /* Set text color to white */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: add some shadow for better visibility */
+}
+/* src/App.css */
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.text-container {
+  padding: 2rem;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.bg-custom {
+  background-image: url('path/to/your/image.jpg'); /* Replace with your image path */
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+html {
+  scroll-behavior: smooth;
+}
+
